@@ -4,9 +4,9 @@ class Screen6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         title: Text('Screen 6'),
-      ),
+      ),*/
       body: Center(
         child: ElevatedButton(
           onPressed: () {

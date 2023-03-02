@@ -9,13 +9,14 @@ class _Screen7State extends State<Screen7> {
   bool _isAnimatedContainerExpanded = false;
   bool _isAnimatedCrossFadeFirst = true;
   bool _isTextBigger = false;
+  bool _isTextColorChanged = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         title: Text('Screen 7'),
-      ),
+      ),*/
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -24,27 +25,27 @@ class _Screen7State extends State<Screen7> {
               duration: Duration(seconds: 1),
               height: _isAnimatedContainerExpanded ? 200 : 100,
               width: _isAnimatedContainerExpanded ? 200 : 100,
-              color: _isAnimatedContainerExpanded ? Colors.red : Colors.blue,
+              color: _isAnimatedContainerExpanded ? Colors.red : Colors.green,
               child: Center(
                 child: Text(
                   'Animated Container',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 20,
                   ),
                 ),
               ),
             ),
             SizedBox(height: 20),
             AnimatedCrossFade(
-              duration: Duration(seconds: 1),
+              duration: Duration(seconds: 2),
               firstChild: Container(
                 height: 100,
                 width: 100,
-                color: Colors.blue,
+                color: Colors.green,
                 child: Center(
                   child: Text(
-                    'Blue',
+                    'Green',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
@@ -75,6 +76,7 @@ class _Screen7State extends State<Screen7> {
               onTap: () {
                 setState(() {
                   _isTextBigger = !_isTextBigger;
+                  _isTextColorChanged = !_isTextColorChanged;
                 });
               },
               child: AnimatedDefaultTextStyle(
@@ -82,10 +84,13 @@ class _Screen7State extends State<Screen7> {
                 style: TextStyle(
                   fontSize: _isTextBigger ? 32 : 24,
                   fontWeight: FontWeight.bold,
+                  color: _isTextColorChanged ? Colors.red : Colors.green,
+                  // Set the color to red if _isTextColorChanged is true, else set it to purple
                 ),
                 child: Text('Animated Text'),
               ),
             ),
+
           ],
         ),
       ),
@@ -94,6 +99,8 @@ class _Screen7State extends State<Screen7> {
           setState(() {
             _isAnimatedContainerExpanded = !_isAnimatedContainerExpanded;
             _isAnimatedCrossFadeFirst = !_isAnimatedCrossFadeFirst;
+            _isTextBigger = !_isTextBigger;
+            _isTextColorChanged = !_isTextColorChanged;
           });
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
