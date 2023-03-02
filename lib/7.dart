@@ -43,6 +43,10 @@ class _Screen7State extends State<Screen7> {
                 height: 100,
                 width: 100,
                 color: Colors.green,
+                /*decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(20),
+                ),*/
                 child: Center(
                   child: Text(
                     'Green',
@@ -57,6 +61,10 @@ class _Screen7State extends State<Screen7> {
                 height: 100,
                 width: 100,
                 color: Colors.red,
+                /*decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(20),
+                ),*/
                 child: Center(
                   child: Text(
                     'Red',

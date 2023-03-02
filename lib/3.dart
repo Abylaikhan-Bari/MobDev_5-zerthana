@@ -6,7 +6,7 @@ class Screen3 extends StatefulWidget {
 }
 
 class _Screen3State extends State<Screen3> {
-  List<String> items = ['Item 1', 'Item 2', 'Item 3'];
+  List<String> items = ['Birinshi', 'Ekinshi', 'Ushinshi', 'Tortinshi', 'Besinshi', 'Altynshy', 'Jetinshi'];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _Screen3State extends State<Screen3> {
 
             return Dismissible(
               key: Key(item),
-              direction: DismissDirection.horizontal,
+              direction: DismissDirection.down,
               onDismissed: (direction) {
                 setState(() {
                   items.removeAt(index);
@@ -42,23 +42,27 @@ class _Screen3State extends State<Screen3> {
                 );
               },
               child: Center(
-              child: Container(
-                height: 100,
-                width: 100,
-                color: Colors.blue,
-                margin: EdgeInsets.all(10),
-                child: Center(
-                  child: Text(item),
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  //color: Colors.blue,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue,
+                  ),
+                  margin: EdgeInsets.all(10),
+                  child: Center(
+                    child: Text(item),
+                  ),
                 ),
               ),
-              /*background: Container(
+              background: Container(
                 color: Colors.red,
                 child: Icon(
                   Icons.delete,
                   color: Colors.white,
                 ),
-              ),*/
-              )
+              ),
             );
           },
         ),
