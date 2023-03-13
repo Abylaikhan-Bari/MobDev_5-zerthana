@@ -48,7 +48,7 @@ class _Screen3State extends State<Screen3> {
                   //color: Colors.blue,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.blue,
+                    color: Colors.indigoAccent,
                   ),
                   margin: EdgeInsets.all(10),
                   child: Center(

@@ -25,7 +25,7 @@ class _Screen7State extends State<Screen7> {
               duration: Duration(seconds: 1),
               height: _isAnimatedContainerExpanded ? 200 : 100,
               width: _isAnimatedContainerExpanded ? 200 : 100,
-              color: _isAnimatedContainerExpanded ? Colors.red : Colors.green,
+              color: _isAnimatedContainerExpanded ? Colors.cyan: Colors.purple,
               child: Center(
                 child: Text(
                   'Animated Container',
@@ -40,16 +40,16 @@ class _Screen7State extends State<Screen7> {
             AnimatedCrossFade(
               duration: Duration(seconds: 2),
               firstChild: Container(
-                height: 100,
-                width: 100,
-                color: Colors.green,
+                height: 500,
+                width: 200,
+                color: Colors.purple,
                 /*decoration: BoxDecoration(
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(20),
                 ),*/
                 child: Center(
                   child: Text(
-                    'Green',
+                    'Purple',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
@@ -60,14 +60,14 @@ class _Screen7State extends State<Screen7> {
               secondChild: Container(
                 height: 100,
                 width: 100,
-                color: Colors.red,
+                color: Colors.cyan,
                 /*decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(20),
                 ),*/
                 child: Center(
                   child: Text(
-                    'Red',
+                    'Cyan',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,
@@ -92,8 +92,8 @@ class _Screen7State extends State<Screen7> {
                 style: TextStyle(
                   fontSize: _isTextBigger ? 32 : 24,
                   fontWeight: FontWeight.bold,
-                  color: _isTextColorChanged ? Colors.red : Colors.green,
-                  // Set the color to red if _isTextColorChanged is true, else set it to purple
+                  color: _isTextColorChanged ? Colors.purpleAccent : Colors.blue,
+                  // Set the color to purpleAccent if _isTextColorChanged is true, else set it to blue
                 ),
                 child: Text('Animated Text'),
               ),

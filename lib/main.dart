@@ -17,6 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+      ),
       title: '5-zerthana',
       home: HomeScreen(),
     );
@@ -25,14 +28,14 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<Tab> myTabs = [
-    Tab(text: '1'),
-    Tab(text: '2'),
-    Tab(text: '3'),
-    Tab(text: '4'),
-    Tab(text: '5'),
-    Tab(text: '6'),
-    Tab(text: '7'),
-    Tab(text: '8'),
+    Tab(text: 'Checkbox & etc.'),
+    Tab(text: 'TimePicker'),
+    Tab(text: 'Dissmissable'),
+    Tab(text: 'SimpleDialog'),
+    Tab(text: 'DeleteDialog'),
+    Tab(text: 'Snackbar'),
+    Tab(text: 'AnimatedContainer'),
+    Tab(text: 'AnimatedCrossFade'),
     /*Tab(text: '9'),
     Tab(text: '10'),*/
   ];

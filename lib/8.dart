@@ -31,12 +31,12 @@ class _Screen8State extends State<Screen8> {
         child: Center(
           child: AnimatedCrossFade(
             duration: Duration(seconds: 1),
-            sizeCurve: Curves.bounceIn,
+            sizeCurve: Curves.linear,
             firstChild: Container(
               width: MediaQuery.of(context).size.width * 0.7,
               height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.purple,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(

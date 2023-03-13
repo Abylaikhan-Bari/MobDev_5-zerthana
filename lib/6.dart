@@ -9,6 +9,11 @@ class Screen6 extends StatelessWidget {
       ),*/
       body: Center(
         child: ElevatedButton(
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all<Size>(
+              Size(200, 60), // Set the desired size of the button
+            ),
+          ),
           onPressed: () {
             final snackBar = SnackBar(
               content: Text('Hello, this is a snackbar!'),

@@ -11,6 +11,11 @@ class Screen5 extends StatelessWidget {
         child: Tooltip(
           message: 'Delete item',
           child: ElevatedButton(
+            style: ButtonStyle(
+              minimumSize: MaterialStateProperty.all<Size>(
+                Size(200, 60), // Set the desired size of the button
+              ),
+            ),
             onPressed: () {
               showDialog(
                 context: context,
